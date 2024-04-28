@@ -15,6 +15,15 @@
     tags:
     - deploy_dockercoins
     notify: Display deployment result on screen
+  - name: display all resources dockercoins
+    command: kubectl get all -o wide
+    register: display_dockercoins
+    tags:
+    - display_dockercoins
+  - name: Delete dockercoins
+    command: kubectl delete -f /tmp/dockercoins.yaml
+    tags:
+    - delete_dockercoins
   
   handlers:
   - name: Display deployment result on screen
