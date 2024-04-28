@@ -14,7 +14,7 @@ pipeline {
   
     stage('Cloning Git') {
       steps {
-        git 'https://github.com/brahimhamdi/dockercoins310323'
+        git 'https://github.com/brahimhamdi/dockercoins_042024'
       }
     }
   
